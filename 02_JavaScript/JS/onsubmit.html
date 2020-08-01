@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onsubmitFun() {
+            alert("数据错误，提交失败");
+            return false;
+        }
+
+        window.onload = function () {
+            var elementById = document.getElementById("onsubmit");
+            elementById.onsubmit = function () {
+
+                alert("数据错误，提交失败");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+<form action="http://localhost:8080" onsubmit="return onsubmitFun()" >
+    <input type="submit" value="提交">
+</form>
+<form action="http://localhost:8080" id="onsubmit">
+    <input type="submit" value="提交1">
+</form>
+</body>
+</html>

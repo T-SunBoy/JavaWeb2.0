@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function checkAll() {
+            var elementsByName = document.getElementsByName("hobby");
+            //alert(elementsByName[0].checked);
+            for (var i = 0; i < elementsByName.length; i++) {
+                elementsByName[i].checked = true;
+            }
+        }
+
+        function checkNo() {
+            var elementsByName = document.getElementsByName("hobby");
+            for (var i = 0; i < elementsByName.length; i++) {
+                elementsByName[i].checked = false;
+            }
+
+
+
+        }
+        function checkOne() {
+            var elementsByName1 = document.getElementsByName("hobby");
+            for (var i = 0; i < elementsByName1.length; i++) {
+                elementsByName1[i].checked = !elementsByName1[i].checked;
+            }
+        }
+    </script>
+</head>
+<body>
+兴趣爱好:
+hobby<input type="checkbox" name="hobby" value="cpp"/>
+java<input type="checkbox" name="hobby"/>
+python<input type="checkbox" name="hobby"/><br/>
+<button onclick="checkAll()">全选</button>
+<button onclick="checkNo()">全不选</button>
+<button onclick="checkOne()">反选</button>
+</body>
+</html>

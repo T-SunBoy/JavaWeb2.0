@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //是否包含字母e
+        //var patt = new RegExp("e");
+        //var patt = /e/;
+        //是否包含a或b或c
+        //var patt = /[abc]/;
+        //是否包含任意小写字母
+        // var patt = /a-z/;
+        //是否包含任意大写字母
+        // var patt = /A-Z/;
+        //是否包含任意的数字
+        //var patt = /0-9/;
+
+        //重点：是否包含字母、数字、下划线
+        //var patt = /\w/;
+
+        //是否至少包含一个a
+       // var patt = /a+/;
+        //是否包含零个a和多个a
+        //var patt = /a*/;
+        //是否包含一个a和零个a
+        //var patt = /a?/;
+        //alert(patt);
+
+        //字符串是否包含三个a
+        //var patt = /a{3}/;
+
+
+        //重点:字符串是否包含至少三个a，或最多5个a
+        //var patt = /a{3,5}/;
+
+        //是否以a结尾
+        //var patt = /a$/;
+        //是否以a开头
+        //var patt = /^a/;
+
+        //重点：是否从头到尾完全匹配
+        var patt = /^\w{5,15}$/;
+        var str = "adaaadasdaaaaaae";
+        alert(patt.test(str));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

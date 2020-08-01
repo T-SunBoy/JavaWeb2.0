@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onBlurFun() {
+            alert("静态注册失去焦点事件");
+
+        }
+        window.onload = function () {
+
+            var element = document.getElementById(1);
+            element.onblur = function () {
+                alert("动态注册失去焦点事件");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+账户：<input id=1 type="text" /><br/>
+密码：<input  type="password" onblur="onBlurFun()" /><br/>
+</body>
+</html>

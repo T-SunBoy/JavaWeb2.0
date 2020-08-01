@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onclickFun() {
+            var elementById = document.getElementById("username");
+            var value = elementById.value;
+            var patt = /^\w{5,12}$/;
+            var elementById1 = document.getElementById("userSpan");
+
+            if(patt.test(value)){
+                //alert("合法用户名");
+                elementById1.innerHTML = "<img src=\"right.png \" width=\"15px\" height=\"15px\">";
+            } else{
+                //alert("不合法用户名");
+                elementById1.innerHTML = "<img src=\"wrong.png\" width=\"15px\" height=\"15px\">";
+            }
+        }
+
+    </script>
+</head>
+<body>
+用户：<input type="text" value="123456" id="username">
+<span style="color: orangered;" id="userSpan">请输入5-12位由数字、字母、下划线组成的账户。。。
+</span><br/>
+<button onclick="onclickFun()">注册</button>
+</body>
+</html>

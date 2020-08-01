@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onchangeFun() {
+            alert("静态:选择已经改变");
+        }
+        window.onchange = function () {
+            var elementById = document.getElementById("select");
+            elementById.onchange = function () {
+                alert("动态:选择已经改变");
+            }
+
+        }
+    </script>
+</head>
+<body>
+请选择：
+<select onchange="onchangeFun()">
+    <option>国家</option>
+    <option>中国</option>
+    <option>美国</option>
+    <option>日本</option>
+    <option>韩国</option>
+</select><br/>
+
+请选择：
+<select id="select" onchange="onchangeFun()">
+    <option>爱好</option>
+    <option>篮球</option>
+    <option>足球</option>
+    <option>游泳</option>
+    <option>游戏</option>
+</select>
+
+</body>
+</html>
